@@ -1,0 +1,15 @@
+mutation CreateDigitalStack($name: String!, $categories: [String]!) {
+  CreateDigitalStack(name: $name, categories: $categories) {
+    id
+    name
+    userId
+  }
+}
+
+query GetUserDigitalStacks {
+  GetUserDigitalStacks {
+    id
+    name
+    userId
+  }
+}

@@ -1,0 +1,36 @@
+@keyframes labelScale {
+  from {
+    transform-origin: 0;
+    font-size: 17px;
+  }
+  to {
+    transform-origin: 0;
+    font-size: 15px;
+  }
+}
+
+@keyframes labelScaleReturn {
+  from {
+    transform-origin:0;
+    font-size: 15px;
+  }
+  to {
+    transform-origin:0;
+    font-size: 17px;
+  }
+}
+
+label.active {
+  animation: labelScale;
+  animation-duration: 0.1s;
+  height: fit-content;
+  width: fit-content;
+  font-size: 15px;
+}
+label.disable {
+  animation: labelScaleReturn;
+  animation-duration: 0.1s;
+  height: fit-content;
+  width: fit-content;
+  font-size: 17px;
+}

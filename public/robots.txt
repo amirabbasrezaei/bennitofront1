@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://bennito.ir/sitemap.xml

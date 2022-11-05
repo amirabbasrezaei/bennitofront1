@@ -1,0 +1,40 @@
+[
+  {
+    "name": "cloth",
+    "id": "0",
+    "self": false,
+    "checked": false,
+    "sub": [
+      { "name": "man", "id": "1", "self": false, "checked": false, "sub": [] },
+      {
+        "name": "weman",
+        "id": "2",
+        "self": false,
+        "checked": false,
+        "sub": []
+      },
+      {
+        "name": "children",
+        "id": "5",
+        "self": false,
+        "checked": false,
+        "sub": [
+          {
+            "name": "T-Shirt",
+            "id": "4",
+            "self": false,
+            "checked": false,
+            "sub": []
+          },
+          {
+            "name": "shirt",
+            "id": "6",
+            "self": false,
+            "checked": false,
+            "sub": []
+          }
+        ]
+      }
+    ]
+  }
+]

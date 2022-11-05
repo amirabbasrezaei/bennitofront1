@@ -1,0 +1,44 @@
+mutation LoginBySms($smsId: String!, $code: String!, $phoneNumber: String!) {
+  LoginBySms(smsId: $smsId, code: $code, phoneNumber: $phoneNumber) {
+    id
+    phoneNumber
+    isPhoneVerified
+    isDocumentsVerified
+  }
+}
+
+mutation SendLoginCode($phoneNumber: String!) {
+  SendLoginCode(phoneNumber: $phoneNumber) {
+    id
+    phonenumber
+    expireDate
+  }
+}
+
+mutation LoginByPass($email: String!, $phoneNumber: String!, $password: String!) {
+  LoginByPass(email: $email, phoneNumber: $phoneNumber, password: $password) {
+    id
+    phoneNumber
+    isPhoneVerified
+    isDocumentsVerified
+  }
+}
+
+
+mutation SendForgetPassCode($phoneNumber: String!) {
+  SendForgetPassCode(phoneNumber: $phoneNumber) {
+    id
+    phonenumber
+    expireDate
+  }
+}
+
+
+
+# mutation CreateDigitalStack($name: String!, $categories: [String]!) {
+#   CreateDigitalStack(name: $name, categories: $categories) {
+#     id
+#     name
+#     userId
+#   }
+# }

@@ -1,0 +1,146 @@
+mutation CreateProduct(
+  $digitalStackId: String!
+  $name: String!
+  $price: String!
+  $quantity: Int!
+  $categories: [String]!
+  $imageCount: Int!
+  $tags: [String]!
+  $attributes: JSON!
+) {
+  CreateProduct(
+    digitalStackId: $digitalStackId
+    name: $name
+    price: $price
+    quantity: $quantity
+    categories: $categories
+    imageCount: $imageCount
+    tags: $tags
+    attributes: $attributes
+  ) {
+    id
+    name
+    digitalStackId
+    description
+    price
+    quantity
+    thumbnailUrl
+    imagesUrl
+    tags
+    attributes
+    categories {
+      filters {
+        id
+        isMultipleChoice
+        isSelectableByUser
+        name
+        values {
+          categoryFilterId
+          id
+          numberValue
+          productId
+          stringValue
+          type
+        }
+      }
+    }
+  }
+}
+
+mutation CreateCategory($name: String!) {
+  CreateCategory(name: $name) {
+    id
+    name
+    parentId
+    filters {
+      id
+      isMultipleChoice
+      isSelectableByUser
+      name
+      values {
+        categoryFilterId
+        id
+        numberValue
+        productId
+        stringValue
+        type
+      }
+    }
+  }
+}
+
+query GetCategory($categoryId: String!) {
+  GetCategory(categoryId: $categoryId) {
+    id
+    name
+    parentId
+    filters {
+      id
+      isMultipleChoice
+      isSelectableByUser
+      name
+      values {
+        categoryFilterId
+        id
+        numberValue
+        productId
+        stringValue
+        type
+      }
+    }
+  }
+}
+
+query GetCategoriesWithoutFilter {
+  GetCategories {
+    id
+    name
+    parentId
+  }
+}
+
+query GetFilters($categoryId: [String]) {
+  GetCategories(categoryId: $categoryId) {
+    name
+    id
+    filters {
+      expectedRange
+      expectedStrings
+      id
+      isMultipleChoice
+      isSelectableByUser
+      name
+      values {
+        categoryFilterId
+        id
+        numberValue
+        productId
+        stringValue
+        type
+      }
+    }
+  }
+}
+
+mutation CreateFilterValue(
+  $categoryFilterId: String!
+  $productId: String!
+  $type: String!
+  $stringValue: String
+  $numberValue: Int
+) {
+  CreateFilterValue(
+    categoryFilterId: $categoryFilterId
+    productId: $productId
+    type: $type
+    stringValue: $stringValue
+    numberValue: $numberValue
+  ) {
+    id
+    stringValue
+    numberValue
+    type
+    categoryFilterId
+    productId
+  }
+}

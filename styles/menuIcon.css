@@ -1,0 +1,49 @@
+
+
+.menuIconLabel {
+  display: flex;
+  flex-direction: column;
+  width: 26px;
+  cursor: pointer;
+}
+
+.menuIconLabel span {
+  background: rgb(58, 58, 58);
+  border-radius: 10px;
+  height: 3px;
+  margin: 2px 0;
+  transition: 0.4s cubic-bezier(0.63, -0.6, 0.32, 1.6);
+}
+
+.menuIconSpan1 {
+  width: 50%;
+}
+
+.menuIconSpan2 {
+  width: 100%;
+}
+
+.menuIconSpan3 {
+  width: 75%;
+}
+
+.menuIconInput {
+  display: none;
+}
+
+.menuIconInput:checked ~ .menuIconSpan1 {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(-7px, 9px);
+}
+
+.menuIconInput:checked ~ .menuIconSpan2 {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+}
+
+.menuIconInput:checked ~ .menuIconSpan3 {
+  transform-origin: bottom;
+  width: 50%;
+  transform: translate(-2px, -3px) rotatez(45deg);
+}
+
