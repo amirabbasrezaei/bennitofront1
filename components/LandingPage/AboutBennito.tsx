@@ -50,14 +50,12 @@ export default function AboutBennito({
             </motion.div>
           </div>
         </div>
-        <div className=" w-full md:p-16 z-10 ">
-          <div className="w-full relative h-9">
-            <motion.div
-              onViewportEnter={() => {
+        <motion.div onViewportEnter={() => {
                 setIsAnimationActive({...isAnimationActive, aboutBennito: true });
                 console.log("enter");
-              }}
-             
+              }} className=" w-full md:p-16 z-10 ">
+          <div className="w-full relative h-9">
+            <motion.div
               animate={{
                 right: isAnimationActive?.aboutBennito ? 0 : "500px",
               }}
@@ -71,9 +69,9 @@ export default function AboutBennito({
             </motion.div>
           </div>
           <motion.div
-            animate={{
-              scale: isAnimationActive?.aboutBennito ? 1 : 0,
-            }}
+            // animate={{
+            //   scale: isAnimationActive?.aboutBennito ? 1 : 0,
+            // }}
             transition={{ duration: 0.7 }}
             className="h-full w-full  flex flex-col  items-center md:items-start text-justify justify-around py-8 gap-10"
           >
@@ -109,9 +107,12 @@ export default function AboutBennito({
               </p>
             </div>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
-      <div
+      <motion.div
+      onViewportEnter={() =>
+        setIsAnimationActive(({...isAnimationActive, aboutBennito2: true }))
+      }
         className={classNames(
           "w-full relative flex flex-col-reverse gap-3 md:flex-row-reverse  justify-center items-center",
           `h-fit md:h-screen`
@@ -123,9 +124,7 @@ export default function AboutBennito({
         <div className="z-10  w-full p-3">
           <div className="h-fit w-full">
             <motion.div
-              onViewportEnter={() =>
-                setIsAnimationActive(({...isAnimationActive, aboutBennito2: true }))
-              }
+              
               animate={{
                 scale: isAnimationActive?.aboutBennito2 ? 1 : 0,
               }}
@@ -143,16 +142,16 @@ export default function AboutBennito({
             </motion.div>
           </div>
         </div>
-        <div className=" w-full md:p-16 z-10 ">
-          <div className="h-full w-full   flex flex-col  items-center md:items-start text-justify justify-around py-8 gap-10">
-            <div className="w-full relative">
+        <div className=" w-full h-full md:p-16 z-10 ">
+          <div className=" w-full h-[500px] flex flex-col  items-center md:items-start text-justify justify-around py-8 gap-10">
+            <div className="w-[70%] h-full relative">
               <motion.div
                 animate={{
                   bottom: isAnimationActive?.aboutBennito2 ? "0px" : "500px",
                   opacity: isAnimationActive?.aboutBennito2 ? 1 : 0,
                 }}
                 transition={{ duration: 0.4 }}
-                className="w-[70%] absolute"
+                className=" absolute "
               >
                 <div className="flex flex-row items-center gap-4 mb-3">
                   <div className="fill-[#0984E3] h-6 w-6">
@@ -169,12 +168,13 @@ export default function AboutBennito({
                 </p>
               </motion.div>
             </div>
-            <div className="w-full relative">
-              <motion.div animate={{
+            <div className="w-[70%]  h-full relative">
+              <motion.div 
+              animate={{
                   top: isAnimationActive?.aboutBennito2 ? "0px" : "500px",
                   opacity: isAnimationActive?.aboutBennito2 ? 1 : 0,
                 }}
-                transition={{ duration: 0.4 }} className="w-[70%] absolute">
+                transition={{ duration: 0.4 }} className="absolute">
                 <div className="flex flex-row items-center gap-4 mb-3">
                   <div className="fill-[#0984E3] stroke-[#0984E3] h-7 w-7">
                     <SupportIcon />{" "}
@@ -192,7 +192,7 @@ export default function AboutBennito({
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
