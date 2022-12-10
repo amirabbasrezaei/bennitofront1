@@ -8,7 +8,7 @@ const defaultHandler = () => {
   // TODO Maybe change later
   Router.back();
 };
-const BackButton: FC<propsType> = ({ children, onClick = defaultHandler }) => {
+const BackButton: FC<propsType> = ({  onClick = defaultHandler }) => {
   return <button onClick={onClick}>back</button>;
 };
 export default BackButton;

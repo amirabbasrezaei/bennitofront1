@@ -9,7 +9,7 @@ type Props = {
   setShowMenu: (e) => void;
 };
 
-export default function FilterItems({ showMenu, setShowMenu }: Props) {
+export default function FilterItems({ showMenu }: Props) {
   const filterIconRef = useRef(null);
   const neighIconRef = useRef(null);
   const [filterIconHeight, setfilterIconHeight] = useState();

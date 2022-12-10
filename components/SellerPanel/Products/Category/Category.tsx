@@ -26,7 +26,7 @@ type Props = {
 const stackID = "cl6gq62o000000m2u47rzkgag" // should get stackID first
 
 
-export default function Category({ isAtAddStage, setShowCategory, setCheckedCategories, checkedCategories }: Props) {
+export default function Category({ setShowCategory, setCheckedCategories, checkedCategories }: Props) {
 
   /// Hooks & variables ///
   const { data: GetCategoriesData, loading: GetCategoriesLoading, error: GetCategoriesError } = useGetCategoriesWithoutFilterQuery()
@@ -149,7 +149,7 @@ export default function Category({ isAtAddStage, setShowCategory, setCheckedCate
           <AnimatePresence>
 
             {
-              selecetedCategories.length && selecetedCategories.at(-1).map((cat, index) => <CategoryItem checked={cat.checked} checkCategory={checkCategory} addCategory={addCategory} category={cat} key={cat.id} direction={categoryAnimationDirection} name={cat.name} />)
+              selecetedCategories.length && selecetedCategories.at(-1).map((cat) => <CategoryItem checked={cat.checked} checkCategory={checkCategory} addCategory={addCategory} category={cat} key={cat.id} direction={categoryAnimationDirection} name={cat.name} />)
             }
 
           </AnimatePresence>

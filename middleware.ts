@@ -3,7 +3,7 @@ import type { NextRequest } from "next/server";
 import { NextResponse as res } from "next/server";
 import { checkVerified } from "./middlewareFn/sellerpanelMiddleware";
 
-export function middleware(req: NextRequest) {
+export function middleware(_req: NextRequest) {
   // if (req.nextUrl.pathname.startsWith("/sellerpanel")) {
   //   return checkVerified(req);
   // }

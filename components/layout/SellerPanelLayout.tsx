@@ -14,7 +14,7 @@ type Props = {
   className?: any;
 }
 
-export default function SellerPanelLayout({ children, back = true, title, leftIcon, navbar, mobilemenu, bgcolor = "white", className }: Props) {
+export default function SellerPanelLayout({ children, back = true, title, navbar, mobilemenu, bgcolor = "white", className }: Props) {
   return (
     <div  className={classNames('px-[25px] w-full fixed top-0 right-0 h-screen overflow-y-scroll pb-[80px] ', "bg-" + bgcolor, className)}>
       {mobilemenu && <MobileMenu title={title} back={back}  />}

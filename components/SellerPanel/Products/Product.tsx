@@ -12,7 +12,7 @@ type Props = {
     transportation: string[];
 }
 
-export default function Product({ title, feature, category, display, quantity = "0", transportation }: Props) {
+export default function Product({ title,  display, transportation }: Props) {
     return (
         <div className='bg-white w-full py-6 px-6 rounded-2xl flex flex-col gap-3'>
             <div className='w-full relative flex justify-center'>

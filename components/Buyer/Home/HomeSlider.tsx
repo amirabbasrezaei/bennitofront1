@@ -22,7 +22,7 @@ export default function HomeSlider({ }: Props) {
           <button type='button' onClick={() => swiperInstance.slideNext()} className='w-8 h-8 fill-white rotate-90  bg-black/50 backdrop-blur-sm  px-[8px] py-1 rounded-full'><AngleDownIcon /></button>
         </div>
         <div className='flex flex-row gap-3'>
-          {swiperInstance && Array(swiperInstance.slides.length).fill("").map((e, index) => <div key={index} onClick={() => swiperInstance.slideTo(index)} className={classNames(' backdrop-blur-sm h-2 rounded-full cursor-pointer', swiperIndex === (index) ? "w-6 bg-white/70" : "w-2 bg-black/70")}></div>)}
+          {swiperInstance && Array(swiperInstance.slides.length).fill("").map((_, index) => <div key={index} onClick={() => swiperInstance.slideTo(index)} className={classNames(' backdrop-blur-sm h-2 rounded-full cursor-pointer', swiperIndex === (index) ? "w-6 bg-white/70" : "w-2 bg-black/70")}></div>)}
         </div>
       </div>
       <Swiper

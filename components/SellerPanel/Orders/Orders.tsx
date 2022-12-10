@@ -326,7 +326,7 @@ export default function Orders({ }: Props) {
       <div className='absolute left-[20px] top-5 w-8 h-8 stroke-gray-600'><SettingIcon /></div>
 
       <div className='flex flex-row gap-4 w-full p-4 overflow-x-scroll scrollbar-hide'>
-        {OrderOptions.map((opt, index) => <OrderOption filterOrders={filterOrders} isSelected={opt.id === selectedOrderOption.id} setselectedOrderOption={setselectedOrderOption} key={opt.id} opt={opt} />)}
+        {OrderOptions.map((opt) => <OrderOption filterOrders={filterOrders} isSelected={opt.id === selectedOrderOption.id} setselectedOrderOption={setselectedOrderOption} key={opt.id} opt={opt} />)}
       </div>
       <AnimateSharedLayout>
         <motion.div layout className='flex flex-col gap-4 w-full '>

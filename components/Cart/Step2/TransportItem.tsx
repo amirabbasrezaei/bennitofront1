@@ -5,7 +5,7 @@ interface transportProps {
   icon?: string;
   id: number;
 }
-const TransportItam: FC<transportProps> = ({ name, icon, id }) => {
+const TransportItam: FC<transportProps> = ({ name,  id }) => {
   const radioRef = useRef(null);
   return (
     // <div className="form-check flex flex-row gap-3 items-center">

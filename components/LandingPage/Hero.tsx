@@ -8,7 +8,7 @@ type Props = {
     width : number;
 }
 
-export default function Hero({width}: Props) {
+export default function Hero({}: Props) {
 
     
     return (

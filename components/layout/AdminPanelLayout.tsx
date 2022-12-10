@@ -13,7 +13,7 @@ type Props = {
   bgcolor?: string
 }
 
-export default function AdminPanelLayout({ children, back = true, title, leftIcon, navbar, mobilemenu, bgcolor = "white" }: Props) {
+export default function AdminPanelLayout({ children, back = true, title, mobilemenu, bgcolor = "white" }: Props) {
   return (
     <div className={classNames('px-[25px]  w-full fixed h-screen overflow-y-scroll pb-[80px]', "bg-" + bgcolor)}>
       {mobilemenu && <MobileMenu title={title} back={back}  />}

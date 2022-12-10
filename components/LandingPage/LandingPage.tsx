@@ -14,17 +14,18 @@ type Props = {}
 export interface IsAnimationActive {
     aboutBennito?: boolean;
     aboutBennito2?: boolean;
+    services?: boolean;
 }
 
 export default function LandingPage({ }: Props) {
     const {width, height, tailwindWidth} = useWindowSize()
     const [isAnimationActive, setIsAnimationActive] = useState<IsAnimationActive | null>(null)
     return (
-        <div className='bg-white   fixed overflow-x-scroll h-full w-full   scrollbar-hide    '>
+        <div className='bg-white   fixed  h-full w-full   scrollbar-hide   overflow-x-hidden '>
             <Header />
             <Hero width={width} />
             <AboutBennito isAnimationActive={isAnimationActive} setIsAnimationActive={setIsAnimationActive} width={width} tailwindWidth={tailwindWidth} />
-            <Services />
+            <Services isAnimationActive={isAnimationActive} setIsAnimationActive={setIsAnimationActive} width={width} height={height}/>
             {/* <AboutUs /> */}
             <Footer />
         </div>

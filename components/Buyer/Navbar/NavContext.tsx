@@ -3,7 +3,7 @@ import navPages from "./navPages";
 
 const NavContext = createContext({
   page:'',
-  setpage: (e:string) => {}
+  setpage: (_:string) => {}
 })
 
 type PropsType = {

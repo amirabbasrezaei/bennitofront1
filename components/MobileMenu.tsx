@@ -15,7 +15,7 @@ type Props = {
 
 
 
-export default function MobileMenu({ back = false,pushBack = true,onClick, title = "title", leftIcon, leftIconColor, leftIconOnClick }: Props) {
+export default function MobileMenu({ back = false,onClick, title = "title", leftIcon, leftIconColor, leftIconOnClick }: Props) {
   return (
     <div className="h-20 w-full flex flex-row justify-center items-center z-30 ">
       <div onClick={() => back ? onClick() : {}} className="relative  flex gap-4 items-center w-full">

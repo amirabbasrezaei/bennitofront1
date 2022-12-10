@@ -34,7 +34,7 @@ const variants = {
 
 
 
-export default function MobileMenu({ isshowMenu, issetShowMenu }: Props) {
+export default function MobileMenu({ isshowMenu}: Props) {
     const { width, tailwindWidth } = useWindowSize()
     const [showMenu, setShowMenu] = useState(false)
     const router = useRouter()

@@ -37,7 +37,7 @@ const products = [
 const findProcuctById = (id: string) =>
   products.find((product: Product) => product.id === id);
 
-const Products: FC = ({ children }) => {
+const Products: FC = ({}) => {
   const [viewMode, setViewMode] = useState<"GRID" | "LIST">("LIST");
   const [selectedProductID, setSelectedProduct] = useState("");
 

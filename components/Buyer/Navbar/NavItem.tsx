@@ -24,7 +24,6 @@ const NavItem: FC<input> = ({
   text,
   isSeleceted,
   icon,
-  layoutId,
   href,
   setClickedPage
 }) => {

@@ -21,7 +21,7 @@ export default function OrderItem({ order }: Props) {
     let count = 0
     const orderCount = order.length
     let tempImages = []
-    order.map((order) => {
+    order.map(() => {
       if (count < 3) {
         tempImages.push('/Images/1606046.jpg')
         count++

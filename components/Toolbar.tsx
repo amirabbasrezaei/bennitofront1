@@ -5,7 +5,7 @@ type propsType = {
   theme?: string;
 };
 // bg-red-500
-const Toolbar: FC<propsType> = ({ children, isTop = true, theme }) => {
+const Toolbar: FC<propsType> = ({ children, theme }) => {
   return (
     <div
       className={classNames(

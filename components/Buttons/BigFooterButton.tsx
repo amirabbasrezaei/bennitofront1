@@ -14,7 +14,7 @@ type Props = {
   className?: any
 }
 
-export default function BigFooterButton({ loading, onClick, name, sticky, disabled, type ,bgColor,textColor,className  }: Props) {
+export default function BigFooterButton({ loading, onClick, name, sticky, disabled, type ,bgColor,className  }: Props) {
   return (
     <button type={type} onClick={onClick} disabled={disabled || loading} className={classNames('w-full h-14 md:h-10', sticky && "absolute bottom-2 right-0 px-[25px]", className)}>
       <div className={classNames('h-full w-full rounded-lg  text-lg lg:text-base flex items-center justify-center', disabled ? "bg-gray-400 text-gray-200" : bgColor ? "bg-" + bgColor : "bg-[#2595ff] text-white" )}>

@@ -10,6 +10,7 @@ import client from "../Apollo/apollo-client";
 import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const AnyComponent = Component as any
   return (
     <>
 
@@ -26,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             gtag('config', 'G-F5SB89CQ3L')
             `}
           </Script>
-          <Component {...pageProps} />
+          <AnyComponent {...pageProps} />
         </ApolloProvider>
       </RTL>
     </>

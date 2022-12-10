@@ -12,10 +12,8 @@ const cacheRtl = createCache({
   key: "muirtl",
   stylisPlugins: [rtlPlugin]
 });
-interface RTLType  {
-    children: any;
-}
-export default function RTL<RTLType>({children})   {
+
+export default function RTL({children})   {
   return (
     <div dir="rtl" className="h-full">
       <CacheProvider value={cacheRtl}>
